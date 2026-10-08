@@ -210,3 +210,23 @@ productCards.forEach(function (card) {
     });
 
 });
+
+// ==================== CLIENT-SIDE ROUTING ====================
+
+function handleRoute() {
+    const route = window.location.hash;
+
+    if (route === "#/shop") {
+        document.getElementById("shop").scrollIntoView();
+    } else if (route === "#/todo") {
+        document.getElementById("todo").scrollIntoView();
+    } else if (route === "#/weather") {
+        document.getElementById("weather").scrollIntoView();
+    } else if (route === "#/contact") {
+        document.getElementById("contact").scrollIntoView();
+    } else {
+        document.getElementById("home").scrollIntoView();
+    }
+}
+
+window.addEventListener("hashchange", handleRoute);

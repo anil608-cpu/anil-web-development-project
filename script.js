@@ -230,3 +230,29 @@ function handleRoute() {
 }
 
 window.addEventListener("hashchange", handleRoute);
+// ==================== ORDER FORM ====================
+
+const orderForm = document.getElementById("orderForm");
+const orderItemsInput = document.getElementById("orderItems");
+const orderTotalInput = document.getElementById("orderTotal");
+
+orderForm.addEventListener("submit", function () {
+
+    const items = [];
+
+    cartList.querySelectorAll("li").forEach(function (li) {
+
+        const text =
+            li.querySelector("span").textContent;
+
+        items.push(text);
+
+    });
+
+    orderItemsInput.value =
+        items.join(", ");
+
+    orderTotalInput.value =
+        "₹" + totalPrice.toLocaleString("en-IN");
+
+});

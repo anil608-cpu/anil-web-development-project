@@ -590,3 +590,54 @@ section {
     border-radius: 8px;
     margin-bottom: 15px;
 }
+/* ===== DARK MODE ===== */
+
+#themeToggle {
+    padding: 10px 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #0f172a;
+    color: #f9fafb;
+}
+
+body.dark-mode section,
+body.dark-mode .product-card,
+body.dark-mode #cartBox {
+    background-color: #1f2937;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label {
+    color: #f9fafb;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #374151;
+    color: white;
+    border-color: #6b7280;
+}
+
+body.dark-mode a {
+    color: #93c5fd;
+}

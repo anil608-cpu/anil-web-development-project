@@ -256,3 +256,23 @@ orderForm.addEventListener("submit", function () {
         "₹" + totalPrice.toLocaleString("en-IN");
 
 });
+// ===== DARK MODE TOGGLE =====
+
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        themeToggle.textContent = isDark
+            ? "☀️ Light Mode"
+            : "🌙 Dark Mode";
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+    });
+}
